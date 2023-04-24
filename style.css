@@ -1,0 +1,607 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  /* background-color: #22252a;*/
+}
+
+body {
+  background: rgb(57, 62, 70);
+  background: radial-gradient(circle, rgba(57, 62, 70, 1) 7%, rgba(34, 37, 42, 1) 64%);
+}
+
+/* aqui se inicia la configuracion del contenido del banner*/
+.banner {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(57, 62, 70);
+  width: 100%;
+}
+
+#cabezera {
+  position: fixed;
+  top: 0;
+  background-color: #22252a;
+  overflow: hidden;
+  transition: 0.4s;
+  z-index: 1;
+  justify-content: center;
+  width: 80%;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.actores li {
+  color: #fff;
+}
+
+.actores {
+  flex-direction: column;
+}
+
+.trailer {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+div.cuerpo img {
+  float: right;
+  margin-left: 8%;
+}
+
+div.navbar {
+  margin: 0 4%;
+}
+
+
+#cabezera .logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+
+.logo a {
+  align-items: center;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  flex-direction: column;
+}
+
+img.imgLogo {
+  max-height: 50px;
+  max-width: 150px;
+  margin-bottom: 6px;
+}
+
+.navbar li {
+  list-style: none;
+  float: left;
+}
+
+.navbar a {
+  color: #fd8f47;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.navbar a:hover {
+  color: #fd7014;
+}
+
+
+.container {
+  width: 25%;
+}
+
+
+.search-form {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+
+
+.search-form input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  padding-right: -2%;
+  text-align-last: center;
+}
+
+.search-form button {
+  position: absolute;
+  padding: 0;
+  left: 14px;
+  top: 45%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.fa-search {
+  color: #999999;
+  font-size: 20px;
+}
+
+/* aqui se inicia la configuracion del contenido del index*/
+
+.content h2:hover {
+  color: #fd7014;
+}
+
+.TOP10-Pelis {
+  width: 1280px;
+  height: auto;
+  overflow: hidden;
+}
+
+.content h2 {
+  color: #fd8f47;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.contenedor {
+  display: inline-block;
+  width: fit-content;
+  height: 150px;
+}
+
+.number {
+  height: 100%;
+  line-height: 100%;
+  font-size: 180px;
+  font-weight: 900;
+  list-style: none;
+  float: left;
+  color: lightgrey;
+  opacity: .2;
+}
+
+.TOP10-Pelis li {
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+.TOP10-Pelis img {
+  height: 100px;
+}
+
+/*Acá comienza el desarrollo de pagina miembros*/
+
+#staff {
+  margin-top: 120px !Important;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo-miembros-1 {
+  color: #abc;
+  font-size: 2rem;
+  line-height: 1.23076923;
+}
+
+.titulo-miembros-1,
+.title-maxi {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 600;
+  margin: 0 0 2.30769231rem;
+  font-style: italic;
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 1px solid #456;
+  color: #9ab;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .075em;
+  margin-bottom: 0.76923077rem;
+  margin-top: 0;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.favsTitle {
+  color: #9ab;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: .8rem;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: .075em;
+  margin-bottom: 0.76923077rem;
+  margin-top: 0;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+ul {
+  align-items: stretch;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  list-style-type: none;
+}
+
+.miembro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.miembro * {
+  margin-bottom: 5%;
+}
+
+.favoritosDePersona img {
+  border: solid 1px rgb(198 205 213 / 34%);
+  margin-left: 5px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  border: solid 1px rgb(198 205 213 / 34%);
+  transition: 0.3s;
+}
+
+.avatar img:hover {
+  transform: scale(1.1);
+}
+
+
+.titulo3 {
+  color: #fff;
+}
+
+.favsTitleBox {
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-top: 2px;
+  margin-right: auto;
+}
+
+.cartelPelicula:hover {
+  opacity: 0.7;
+}
+
+/* Aca comienza la configuración del formulario*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 80%;
+}
+
+.contact_form {
+  width: 100%;
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+  padding-left: 30px;
+}
+
+
+input {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fd7014;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+textarea {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fd7014;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  padding-top: 15px;
+  font-weight: 600;
+}
+
+
+label {
+  display: block;
+  float: center;
+}
+
+
+#enviar {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #fd7014;
+  border-color: #fd7014;
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+
+.cajaBoton {
+  align-items: center;
+}
+
+#enviar p {
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+}
+
+
+span {
+  color: #fd7014;
+}
+
+
+.aviso {
+  font-size: 15px;
+  color: #fff;
+}
+
+
+h3 {
+  text-align: left;
+  margin-bottom: 1% !important;
+  color: #fff;
+}
+
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
+
+
+::-webkit-input-placeholder {
+  color: #636363;
+  font-weight: 600;
+}
+
+
+::-webkit-textarea-placeholder {
+  color: #636363;
+  font-weight: 600;
+}
+
+
+.formulario input:focus {
+  outline: 0;
+  border: 1px solid #e19e18;
+}
+
+
+.formulario textarea:focus {
+  outline: 0;
+  border: 1px solid #e19e18;
+}
+
+.aviso {
+  margin-bottom: 10px;
+}
+
+
+/*POP-UP*/
+
+
+.infoPelicula {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenido {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+  max-width: 80rem;
+  max-height: 44rem;
+  overflow: hidden;
+  border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
+  background: #22252a;
+  -webkit-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.trailer img {
+  width: 40rem;
+  max-width: 95%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-radius: 2px;
+}
+
+.sinopsis {
+  flex: 2;
+  max-width: 100%;
+  padding: 1rem 1rem;
+}
+
+.close,
+.close-imp {
+  color: #aaa;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  border-radius: 2px;
+  transition: 0.4s ease-out;
+}
+
+.close:hover,
+.close:focus,
+.close-imp:hover,
+.close-imp:focus {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tituloPelicula {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Patua One", cursive;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tituloPelicula p {
+  margin: 0;
+  padding: 0;
+}
+
+.tituloPelicula,
+.cuerpo,
+.final {
+  padding: 0.5rem 3rem;
+}
+
+.tituloPelicula {
+  padding-top: 2rem;
+}
+
+.final {
+  padding-bottom: 2rem;
+}
+
+h1 {
+  font-family: "Patua One", cursive;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contenido {
+  width: 100%;
+  flex-wrap: wrap;
+  
+  overflow-y: auto !important;
+}
+
+.modelTitle {
+  width: 80%;
+  font-size: 33px;
+  margin: 10px auto;
+  text-align: center;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+/*Responsive*/
+
+@media (max-width: 960px) {
+  #listaMiembros {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cajaBoton {
+    display: flex;
+  }
+
+  body {
+    margin: 2%;
+    margin-top: 80px;
+  }
+
+  .titulo-miembros-1 {
+    font-size: 1.6rem;
+    margin: 0 0 1rem;
+  }
+
+  #cabezera {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #cabezera .logo {
+    padding-bottom: 12px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .container {
+    width: 70%;
+  }
+
+
+  .trailer iframe {
+    width: 100%;
+}
+}
