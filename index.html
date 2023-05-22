@@ -1,0 +1,304 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FilmVerse</title>
+</head>
+
+<body>
+    <section class="banner">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="/"><img src="Imagenes/Transparente B.png" alt="logo"></a>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="inicio"><b><u>Inicio</u></b></a></li>
+                        <li><a href="/" class="categorias">Categorias</a></li>
+                        <li><a href="/" class="noticias">Noticias</a></li>
+                        <li><a href="/" class="miembros">Miembros</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container">
+                <form class="search-form">
+                    <button type="submit" class="fas fa-search"></button>
+                    <input type="text" placeholder="Que queres ver hoy?" required>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor">
+        <div class="contenedor-nuevo-contenido">
+            <h1>Descubre nuevo contenido diariamente</h1>
+        </div>
+        <div class="grid">
+            <div class="title-card contenedor-carouselSpotlight">
+                <!-- EL BOTÓN QUEDA PEGADO AL BORDE DE ESTE DIV MIENTRAS QUE LO QUE SE MUEVE ES EL DIV INTERIOR-->
+                <div class="flecha-izquierda-spotlight1">
+                    <button role="button" id="flecha-izquierda-spotlight1"><i class="fas fa-angle-left"></i></button>
+                </div>
+                <div class="title-card Spotlight1">
+                    <!-- DIV CONTENIDO DEL CARROUSEL PARA QUE EL BOTÓN QUEDE POR FUERA Y NO SE MUEVA-->
+                    <a href="#"><img id="movieDiscovery0" src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="releaseDate0">Año</p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="movieTitle0">Título</p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                    <a href="#" class="spotlight-next"><img id="movieDiscovery1" src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="releaseDate1">Año</p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="movieTitle1">Titulo</p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                    <a href="#" class="spotlight-next"><img id="movieDiscovery2" src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="releaseDate2">Año</p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="movieTitle2">Titulo</p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                    <a href="#" class="spotlight-next"><img id="movieDiscovery3" src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="releaseDate3">Año</p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="movieTitle3">Titulo</p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="flecha-derecha-spotlight1">
+                    <button role="button" id="flecha-derecha-spotlight1"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+
+            <div class="title-card contenedor-carouselSpotlight">
+                <div class="flecha-izquierda-spotlight2">
+                    <button role="button" id="flecha-izquierda-spotlight2"><i class="fas fa-angle-left"></i></button>
+                </div>
+                <div class="title-card Spotlight2">
+                    <a href="#"><img id="tvshowDiscovery0" src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="firstAirDate0"></p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="tvshowName0"></p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                    <a href="#" class="spotlight-next"><img id="tvshowDiscovery1"src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="firstAirDate1"></p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="tvshowName1"></p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                    <a href="#" class="spotlight-next"><img id="tvshowDiscovery2"src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="firstAirDate2"></p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="tvshowName2"></p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                    <a href="#" class="spotlight-next"><img id="tvshowDiscovery3"src="" alt=""></a>
+                    <div class="info">
+                        <p class="stats contenedor" id="firstAirDate3"></p>
+                        <div class="spotlight contenedor">
+                            <a href="#">
+                                <span>
+                                    <p class="title" id="tvshowName3"></p>
+                                </span>
+                            </a>
+                        </div>
+                        <span class="boton-ver">
+                            <button>Ver ahora</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="flecha-derecha-spotlight2">
+                    <button role="button" id="flecha-derecha-spotlight2"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="recomendadas contenedor">
+            <div class="contenedor-titulo-controles">
+                <h2>Top 10 Peliculas mas vistas</h2>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda1" class="flecha-izquierda"><i
+                        class="fas fa-angle-left"></i></button>
+
+                <div class="contenedor-carousel1">
+                    <div class="carousel">
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie0" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie1" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie2" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie3" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie4" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie5" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie6" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie7" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie8" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topMovie9" src="" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <button role="button" id="flecha-derecha1" class="flecha-derecha"><i
+                        class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div class="recomendadas contenedor">
+            <div class="contenedor-titulo-controles">
+                <h2>Top 10 Series mas vistas</h2>
+            </div>
+            <div class="contenedor-principal">
+                <button role="button" id="flecha-izquierda2" class="flecha-izquierda"><i
+                        class="fas fa-angle-left"></i></button>
+
+                <div class="contenedor-carousel2">
+                    <div class="carousel">
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow0" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow1" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow2" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow3" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow4" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow5" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow6" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow7" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow8" src="" alt=""></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img id="topTVShow9" src="" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <button role="button" id="flecha-derecha2" class="flecha-derecha"><i
+                        class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Contáctanos</h3>
+                        <p>Teléfono: 123456789</p>
+                        <p>Correo electrónico: ejemplo@ejemplo.com</p>
+                        <p>Dirección: Ejemplo 1234, Ciudad, País</p>
+                    </div>
+                    <div class="col">
+                        <h3>Síguenos</h3>
+                        <ul class="redes-sociales">
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <div class="copy">
+                                <p>&copy; 2023 Filmverse. Todos los derechos reservados.</p>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Información legal</h3>
+                        <ul>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://kit.fontawesome.com/c22bdf4c92.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
