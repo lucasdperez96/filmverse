@@ -130,7 +130,7 @@ function getRandomMovies() {
         // Mostrar la fecha de lanzamiento
         const releaseDateElement = document.getElementById(`releaseDate${i}`);
         if (releaseDateElement) {
-          releaseDateElement.textContent = `Fecha de lanzamiento: ${movieData.releaseDate}`;
+          releaseDateElement.textContent = `Lanzamiento: ${movieData.releaseDate}`;
         }
       });
     })

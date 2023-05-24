@@ -111,6 +111,7 @@
   margin-block-start: 4px;
   gap: 5%;
   margin-bottom: 50px;
+  max-height: 150px;
 }
  
 .title-card {
@@ -141,13 +142,18 @@
 
 .title-card a{
   background-color: #303338;
- text-decoration: none; 
+  text-decoration: none; 
 }
 
 .title-card .title{
   background-color: #303338;
   color: white;
   text-decoration: none;
+}
+
+.title {
+  overflow: hidden;
+  max-height: 50px;
 }
 
 .title-card{
