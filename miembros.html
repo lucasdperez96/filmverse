@@ -8,11 +8,9 @@
     <script src="https://kit.fontawesome.com/c22bdf4c92.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&display=swap" rel="stylesheet">
-
     <title>Miembros - FilmVerse</title>
 </head>
-
-<body>
+<header>
     <section class="banner">
         <div class="wrapper" id="cabezera">
             <div class="logo" id="logo">
@@ -29,253 +27,230 @@
                     </ul>
                 </nav>
             </div>
-            <div class="container">
-                <form class="search-form">
+            <section class="container">
+                <div class="search-form">
                     <button type="submit" class="fas fa-search"></button>
-                    <input type="text" placeholder="Que queres ver hoy?" required>
-                </form>
-            </div>
+                    <input onkeypress="getApiSearch(event)" class="buscador" id="search-input" type="text"
+                        placeholder="Que queres ver hoy?">
+                </div>
+            </section>
+
         </div>
     </section>
 
+</header>
+
+<body>
     <section id="staff">
-        <h1 class="titulo-miembros-1">~ Personas que aman las peliculas ~</h1>
+        <div class="page-wrapper">
+            <h1 class="titulo-miembros-1">~ Personas que aman las peliculas ~</h1>
 
-        <h2>Administradores de la web</h2>
+            <h2>Administradores de la web</h2>
 
+            <ul id="listaMiembros">
+                <div class="caja-miembro">
+                    <li class="miembro" id="miembro1">
+                        <a class="avatar" href="" data-original-title="">
+                            <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Persona 1" width="150"
+                                height="150">
+                        </a>
+                        <h3 class="titulo3"> Martín Romero </h3>
+                        <div class="favsTitleBox">
+                            <h3 class="favsTitle"> Peliculas Favoritas:</h3>
+                        </div>
+                        <div class="favoritosDePersona">
+                            <ul>
+                                <li>
+                                    <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                            src="https://www.lahiguera.net/cinemania/pelicula/10366/shazam_la_furia_de_los_dioses-cartel-10931.jpg"
+                                            alt="Shazam" width="70" height="105"><a href=""></a></div>
+                                </li>
+                                <li>
+                                    <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                            src="https://www.lahiguera.net/cinemania/pelicula/7809/john_wick_pacto_de_sangre-cartel-7439.jpg"
+                                            alt="John wick 1" width="70" height="105"><a href=""></a></div>
+                                </li>
+                                <li>
+                                    <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                            src="https://www.lahiguera.net/cinemania/pelicula/10542/scream_vi-cartel-10914.jpg"
+                                            alt="Scream" width="70" height="105"><a href=""></a></div>
+                                </li>
+                            </ul>
+                        </div>
 
-        <ul id="listaMiembros">
-            <div class="caja-miembro">
-                <li class="miembro" id="miembro1">
+                    </li>
+                </div>
+                <li class="miembro" id="miembro2">
                     <a class="avatar" href="" data-original-title="">
-                        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Persona 1" width="150"
+                        <img src="https://cdn-icons-png.flaticon.com/512/168/168734.png" alt="Persona 2" width="150"
                             height="150">
                     </a>
-                    <h3 class="titulo3"> Persona 1</h3>
+                    <h3 class="titulo3"> Sonia Del Panta </h3>
                     <div class="favsTitleBox">
                         <h3 class="favsTitle"> Peliculas Favoritas:</h3>
                     </div>
                     <div class="favoritosDePersona">
                         <ul>
                             <li>
-                                <div><img class="cartelPelicula"
-                                        src="https://www.lahiguera.net/cinemania/pelicula/10366/shazam_la_furia_de_los_dioses-cartel-10931.jpg"
-                                        alt="Shazam" width="70" height="105"><a href=""></a></div>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/10274/el_menu-cartel-10815.jpg"
+                                        alt="The Menu" width="70" height="105"><a href=""></a></div>
                             </li>
                             <li>
-                                <div><img class="cartelPelicula"
-                                        src="https://www.lahiguera.net/cinemania/pelicula/10335/john_wick_4-cartel-10832.jpg"
-                                        alt="Jhon wick" width="70" height="105"><a href=""></a></div>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/10444/super_mario_bros_la_pelicula-cartel-10708.jpg"
+                                        alt="Super Mario" width="70" height="105"><a href=""></a></div>
                             </li>
                             <li>
-                                <div><img class="cartelPelicula"
-                                        src="https://www.lahiguera.net/cinemania/pelicula/10542/scream_vi-cartel-10914.jpg"
-                                        alt="Scream" width="70" height="105"><a href=""></a></div>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/10453/la_sirenita-cartel-11121.jpg"
+                                        alt="La Sirenita" width="70" height="105"><a href=""></a></div>
                             </li>
                         </ul>
                     </div>
-
                 </li>
+                <li class="miembro" id="miembro3">
+                    <a class="avatar" href="" data-original-title="">
+                        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Persona 3" width="150"
+                            height="150">
+                    </a>
+                    <h3 class="titulo3"> Lucas Katzman </h3>
+                    <div class="favsTitleBox">
+                        <h3 class="favsTitle"> Peliculas Favoritas:</h3>
+                    </div>
+                    <div class="favoritosDePersona">
+                        <ul>
+                            <li>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/10603/fast_&_furious_x-cartel-11010.jpg"
+                                        alt="Rapidos y Furiosos" width="70" height="105"><a href=""></a></div>
+                            </li>
+                            <li>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/5848/titanic-cartel-4592m.jpg"
+                                        alt="Titanic" width="70" height="105"><a href=""></a></div>
+                            </li>
+                            <li>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/9957/matrix_resurrections-cartel-10038.jpg"
+                                        alt="Matrix 4" width="70" height="105"><a href=""></a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="miembro" id="miembro3">
+                    <a class="avatar" href="" data-original-title="">
+                        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Persona 4" width="150"
+                            height="150">
+                    </a>
+                    <h3 class="titulo3"> Lucas Perez</h3>
+                    <div class="favsTitleBox">
+                        <h3 class="favsTitle"> Peliculas Favoritas:</h3>
+                    </div>
+                    <div class="favoritosDePersona">
+                        <ul>
+                            <li>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/10423/llaman_a_la_puerta-cartel-10837.jpg"
+                                        alt="Llaman a la Puerta" width="70" height="105"><a href=""></a></div>
+                            </li>
+                            <li>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/10452/guardianes_de_la_galaxia_volumen_3-cartel-11081.jpg"
+                                        alt="Guardianes de la Galaxia Vol. 3" width="70" height="105"><a href=""></a></div>
+                            </li>
+                            <li>
+                                <div><img onclick="getImgInfo(this)" class="cartelPelicula"
+                                        src="https://www.lahiguera.net/cinemania/pelicula/3136/avatar-cartel-2643m.jpg"
+                                        alt="Avatar 1" width="70" height="105"><a href=""></a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+            <h2>Queres unirte como colaborador?</h2>
+            <div class="formulario">
+                <form  id="form" action="https://formspree.io/f/xnqyybov"
+                method="POST">
+                    <p>
+                        <label for="nombre" class="colocar_nombre">Nombre de usuario
+
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                            placeholder="Escribí tu nombre">
+                    </p>
+                    <p>
+                        <label for="email" class="colocar_email">Email
+                            <span class="obligatorio">*</span>
+                        </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio"
+                            placeholder="Escribí tu Email">
+                    </p>
+                    <p>
+                        <label for="mensaje" class="colocar_mensaje">Mensaje
+                        </label>
+                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
+                            placeholder="Contanos un poco mas de vos..."></textarea>
+                    </p>
+                    <p class="aviso">
+                        <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>
+                    <div class="cajaBoton"><button type="submit" name="enviar_formulario" id="enviar">
+                            <p>Enviar</p>
+                        </button></div>
+                </form>
             </div>
-            <li class="miembro" id="miembro2">
-                <a class="avatar" href="" data-original-title="">
-                    <img src="https://cdn-icons-png.flaticon.com/512/168/168734.png" alt="Persona 2" width="150"
-                        height="150">
-                </a>
-                <h3 class="titulo3"> Persona 2</h3>
-                <div class="favsTitleBox">
-                    <h3 class="favsTitle"> Peliculas Favoritas:</h3>
-                </div>
-                <div class="favoritosDePersona">
-                    <ul>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10274/el_menu-cartel-10815.jpg"
-                                    alt="The Menu" width="70" height="105"><a href=""></a></div>
-                        </li>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10220/i_wanna_dance_with_somebody-cartel-10783.jpg"
-                                    alt="I Wanna Dance with somebody" width="70" height="105"><a href=""></a></div>
-                        </li>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10393/el_hijo-cartel-10847.jpg"
-                                    alt="El Hijo" width="70" height="105"><a href=""></a></div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="miembro" id="miembro3">
-                <a class="avatar" href="" data-original-title="">
-                    <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Persona 3" width="150"
-                        height="150">
-                </a>
-                <h3 class="titulo3"> Persona 3</h3>
-                <div class="favsTitleBox">
-                    <h3 class="favsTitle"> Peliculas Favoritas:</h3>
-                </div>
-                <div class="favoritosDePersona">
-                    <ul>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10603/fast_&_furious_x-cartel-11010.jpg"
-                                    alt="Rapidos y Furiosos" width="70" height="105"><a href=""></a></div>
-                        </li>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/9900/tin&tina-cartel-10929.jpg"
-                                    alt="Tin & Tina" width="70" height="105"><a href=""></a></div>
-                        </li>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10555/el_piloto-cartel-10906.jpg"
-                                    alt="El Piloto" width="70" height="105"><a href=""></a></div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="miembro" id="miembro3">
-                <a class="avatar" href="" data-original-title="">
-                    <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Persona 4" width="150"
-                        height="150">
-                </a>
-                <h3 class="titulo3"> Persona 4</h3>
-                <div class="favsTitleBox">
-                    <h3 class="favsTitle"> Peliculas Favoritas:</h3>
-                </div>
-                <div class="favoritosDePersona">
-                    <ul>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10423/llaman_a_la_puerta-cartel-10837.jpg"
-                                    alt="Llaman a la Puerta" width="70" height="105"><a href=""></a></div>
-                        </li>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/10337/dungeons_&_dragons_honor_entre_ladrones-cartel-10833.jpg"
-                                    alt="Dungeons & Dragons" width="70" height="105"><a href=""></a></div>
-                        </li>
-                        <li>
-                            <div><img class="cartelPelicula"
-                                    src="https://www.lahiguera.net/cinemania/pelicula/9764/lobo_feroz-cartel-10792.jpg"
-                                    alt="Lobo Feroz" width="70" height="105"><a href=""></a></div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-        </ul>
-
-        <h2>Queres unirte como colaborador?</h2>
-
-        <div class="formulario">
-
-            <form action="submeter-formulario.php" method="post">
-
-
-                <p>
-                    <label for="nombre" class="colocar_nombre">Nombre de usuario
-
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                        placeholder="Escribí tu nombre">
-                </p>
-
-                <p>
-                    <label for="email" class="colocar_email">Email
-                        <span class="obligatorio">*</span>
-                    </label>
-                    <input type="email" name="introducir_email" id="email" required="obligatorio"
-                        placeholder="Escribí tu Email">
-                </p>
-
-                <p>
-                    <label for="mensaje" class="colocar_mensaje">Mensaje
-                    </label>
-                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
-                        placeholder="Contanos un poco mas de vos..."></textarea>
-                </p>
-                <p class="aviso">
-                    <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p>
-
-                <div class="cajaBoton"><button type="submit" name="enviar_formulario" id="enviar">
-                        <p>Enviar</p>
-                    </button></div>
-
-
-
-            </form>
         </div>
 
-        <!-- <div class="container">
-            <h1>CSS & JavaScript Modal Box</h1>
-            <button class="btn">Click Me.</button>
-          </div>
-          
-           The Modal -->
-        <div id="pelicula" class="infoPelicula">
-            <!-- Modal content -->
-            <div class="contenido">
-                <p class="modelTitle">¡Shazam! La furia de los dioses</p>
+          <!-- The Modal -->
+
+        <div id="pelicula" class="popup-desplegale">
+            <div class="cartelera-pelicula">
+                <!-- Modal content -->
                 <span class="close">&times;</span>
-
-                <div class="trailer">
-                    <iframe width="680" height="375" src="https://www.youtube.com/embed/ffTFm4vFLGk"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div><!-- end modal content left -->
-
-                <div class="sinopsis">
-
-
-                    <div class="tituloPelicula">
-
-                    </div>
-
-                    <div class="cuerpo">
-                        <p>
-                            <img src="https://www.lahiguera.net/cinemania/pelicula/10366/shazam_la_furia_de_los_dioses-cartel-10931.jpg"
-                                alt="Shazam" width="140" height="210"><a href=""></a>
-
-                            (Shazam! Fury of the Gods)<br>
-                            <b>Comedia - Acción - Aventura</b><br>
-                            Estados Unidos<br>Año: 2022<br>Fecha de estreno en España: <b>17 de marzo de 2023</b><br>
-                        <p><br><b>Ficha técnica</b><br>Director DAVID F. SANDBERG</p>
-
-                        </p>
-                        <p><b>Reparto</b></p>
-                        <ul class="actores">
-                            <li>Mary Bromfield / Superhero Mary</li>
-                            <li>Zachary Levi / Shazam</li>
-                            <li>Helen Mirren / Hespera</li>
-                            <li>Meagan Good / Super Hero Darla</li>
-                            <li>Rachel Zegler</li>
-                            <li>Marta Milans / Rosa Vasquez</li>
-                            <li>Asher Angel / Billy Batson</li>
-                            <li>Lucy Liu / Kalypso</li>
-                            <li>Adam Brody / Super Hero Freddy</li>
-                        </ul>
-                    </div>
-
-                    <div class="final">
-                        <p> <b>Sinopsis</b><br>
-                            De la mano de New Line Cinema llega "¡Shazam! La furia de los dioses", que continúa la
-                            historia del adolescente Billy Batson que, al recitar la palabra mágica "¡SHAZAM!", se
-                            transforma en su alter ego de superhéroe adulto, Shazam.</p>
-                    </div>
-
-                </div>
+                <article id="renderizado-datos"></article>
             </div>
-        </div><!-- END the modal -->
+        </div> <!-- END the modal -->
+
 
         <script type="text/javascript" src="funciones.js"></script>
     </section>
 
+
 </body>
 
+<footer>
+    <div class="container-footer">
+        <div class="row">
+            <div class="col">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: 123456789</p>
+                <p>Correo electrónico: ejemplo@ejemplo.com</p>
+                <p>Dirección: Ejemplo 1234, Ciudad, País</p>
+            </div>
+            <div class="col">
+                <h3>Síguenos</h3>
+                <ul class="redes-sociales">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <div class="copy">
+                        <p>&copy; 2023 Filmverse. Todos los derechos reservados.</p>
+                    </div>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Información legal</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </html>
-<
