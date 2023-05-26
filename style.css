@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
   background-color: #22252a;
 }
 
@@ -14,14 +16,6 @@
   margin: 5 auto;
   background-color: #22252a;
   z-index: 9999
-}
-
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  overflow: visible;
-  margin: 0 auto;
 }
 
 .logo {
@@ -92,6 +86,58 @@
   font-size: 20px;
 }
 
+/* Menu Hamburguesa */
+
+.icono-menu{
+  position: relative;
+}
+
+.icono-menu img {
+  vertical-align: top;
+  width: 40px;
+  cursor: pointer;
+}
+
+.menuHamburguesa{
+  display: none;
+}
+
+.cont-menu{
+  background-color: #22252a;
+  border: none;
+  position: absolute;
+  height: 100vh;;
+  top: 64px;
+  left: 0px;
+}
+
+/* Estilos del menu en JavaScript */
+.active {
+  transform: translate(-600px);
+}
+
+.opacity{
+  transition: all .5s ease;
+}
+.cont-menu ul{
+  padding: 100px 0px 20px 0px;
+  list-style: none;
+}
+
+.cont-menu ul li a{
+  color: white;
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+
+.cont-menu ul li:hover{
+  background-color: rgb(228, 228, 228);
+  color: rgb(42,42,42);
+}
+
 /* aqui se inicia la configuracion del contenido del index*/
 
 .contenedor-nuevo-contenido{
@@ -113,7 +159,7 @@
   margin-bottom: 50px;
   max-height: 150px;
 }
- 
+
 .title-card {
   display: flex;
   overflow: hidden;
@@ -180,7 +226,6 @@
   border: none;
   cursor: pointer;
 }
-
 /* PEQUEÑO CAMBIO EN BOTON DERECHO + CSS DEL IZQUIERDO */
 
 .contenedor-carouselSpotlight .flecha-derecha-spotlight1,
@@ -190,14 +235,13 @@
   position: absolute;
   width: 8%;
   border: none;
-	background-color: #303338;
+  background-color: #303338;
   right: 0; 
   top: 50%; 
   transform: translateY(-50%); 
   opacity: 0; 
   transition: opacity 0.3s ease-in-out; 
   z-index: 30;
-  
 }
 
 .contenedor-carouselSpotlight .flecha-izquierda-spotlight1,
@@ -229,6 +273,7 @@
   font-size: 25px;
   width: 100%;
 }
+
 
 /* FIN CAMBIOS */
 
@@ -382,7 +427,83 @@ h3 {
   font-size: 14px;
 }
 
+/* descripcion de la selección */
+
+.descripSelec{
+  display: none;
+  box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+  margin-bottom: 10px;
+}
+
+.descripSelec.show #poster {
+  display: flex; 
+}
+
+.descripSelec img{
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.descrpSelect{
+  float: left;
+  padding: 10px;
+}
+
+.descrpSelect p{
+  color: white;
+  padding: 10px;
+}
+
+#poster {
+  display: none;
+}
+
+#titulo{
+  font-size: 30px;
+}
+
+#descripcion{
+  margin: auto;
+  text-align: justify;
+}
+
 /* media */
+
+@media screen and (max-width: 950px){
+  .menuHamburguesa{
+    display: flex;
+  }
+  
+  .navbar{
+    display: none;
+  }
+  .contenedor-carouselSpotlight .flecha-derecha-spotlight1,
+  .contenedor-carouselSpotlight .flecha-derecha-spotlight2,
+  .contenedor-carouselSpotlight .flecha-izquierda-spotlight1,
+  .contenedor-carouselSpotlight .flecha-izquierda-spotlight2 {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr; /* Carruseles uno debajo de otro */
+    gap: 0;
+    width: fit-content;
+  }
+
+  .title-card {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  #Top-Pelis{
+    margin-top: 250px;
+  }
+
+}
 
 @media screen and (max-width: 800px){
   
@@ -401,5 +522,27 @@ h3 {
   .recomendadas .flecha-derecha,
   .recomendadas .flecha-izquierda{
     display: none;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .search-form{
+    display: none;
+  }
+  .descripSelec {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .descripSelec img {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .descrpSelect {
+    text-align: center;
+    order: 1;
   }
 }
