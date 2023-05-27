@@ -1,0 +1,374 @@
+body {
+    height: 100%;
+    width: 100%;
+    
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+
+}
+/*-----------------------Header---------------*/
+header{
+   
+    width: 100%;
+            
+    background-color: black;
+    display: flex;
+    
+    margin: 0px;
+    padding: 0px;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+}
+.logo{
+    height: 80px;
+    position: relative;
+    /* top:15px;
+    left: 10px; */
+    /* border: white 2px solid;   */
+  
+}
+nav.encabezado{
+    
+    width: 50%;
+   
+    margin: 0%;
+    background-color:black;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left:180px;
+    
+}
+.buscar{
+   
+    position:relative;
+    left:270px;
+    top:30px;
+     
+}
+input.buscador{
+    
+    width: 30px;
+    height: 40px;
+    font-size: 17px;
+    color: black;
+    outline: none;
+    border: solid 2px black;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.buscar:hover input{
+    width: 200px;
+
+} 
+.lupa{
+    height: 55px;
+    width: 55px;
+    position:absolute;
+    top:-5px;
+    right:-10px;
+    background:rgb(250, 92, 0);
+    line-height: 55px;
+    text-align: center;
+    
+    border-radius:50px ;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+ul.lista2{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+ul.lista1{
+    list-style-type: none;
+    margin-left: 40px;
+    padding: 25px ; 
+    display: flex;
+    justify-content: space-around;
+    
+}
+li {
+     /* display: inline-block;  */
+    text-decoration:none ;
+    color: white    ;
+    padding: 0px;
+    font-size: 20px;
+}
+li:hover{
+    text-decoration: underline;
+}
+li a {
+    display: inline-block;
+    text-decoration:none ;
+    color: white    ;
+    padding-right: 30px ;
+}
+li a:hover{
+    color: rgb(250, 92, 0);
+}
+
+/*------------------Nav Filtros------------------*/
+
+nav.generos{
+    height: 10%;  
+    width: 100%;
+   
+    text-align: center;
+    
+    background-color:black;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 20px 0px;
+    
+}
+.boton{
+    color:white; 
+    font-size: 16px;
+    
+    background-color: black;
+    text-decoration: none;
+    border-radius: 30px; 
+    transition: background-color 0.3s ease-in;
+    
+}
+.active { 
+    color:white;
+    border: 2px white solid ;
+    border-radius: 30px;
+}
+   
+    
+.hidden{
+    display: none;
+}
+/*---------------------------------section----------------------------*/    
+
+
+
+section{
+    height: 80%;
+    width: 80%;
+    position: relative;
+    left: 10%; 
+    
+    background-color:black;
+    margin-bottom: 70px;
+    padding:0px;
+    margin-top:0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-content: space-between;
+}
+    
+.elementos{
+    padding: 0 ;
+    margin: 0;
+    
+    z-index: 0;
+    margin-bottom:0px;
+    padding:20px 20px 0px;
+
+    
+}
+
+.pelis{
+    width:175px ;
+    height: 280px;
+    border-radius: 10px;
+    
+
+}
+.elementos:hover .titulo{
+    color:rgb(250, 92, 0);
+   
+}
+ .elementos:hover .pelis{
+    filter: opacity(.5);
+} 
+.elementos:hover .play{
+    z-index: 0;
+}
+.elementos:hover .icono{
+    transition: color 1s ease;
+    color:  rgb(250, 92, 0); 
+} 
+.sinopsis{
+    text-decoration: none;
+} 
+.titulo{
+    text-align: center; 
+    color:white;
+}
+.icono{
+    font-size: 50px;
+    color: rgb(134, 53, 7);
+    
+}
+.play{
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    position:relative ;
+    bottom: 220px;
+    z-index: -1;
+    
+}   
+/*----------------------------footer---------------------------------------*/
+footer{
+    height: 15%;
+    margin-top: 70px;
+    width: 100%;
+    /* border: 3px solid white; */
+    background-color:  rgb(250, 92, 0);
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-around;
+    
+}
+p,h3 {
+    color: white;
+    font-size: 17px ;
+} 
+ul.redes-sociales{
+    list-style-type: none;
+    color: white;
+    display: block;
+    margin: 0;
+    padding-right:60px; 
+}
+li.info{
+    font-size: 17px;
+    padding-top: 10px;
+}
+div.config{
+    display: block;
+    }
+.redes{
+    text-align:center;  
+        
+}
+
+
+
+#menu,#menu-check{
+    display: none;
+}
+/*----------------------------- corte (menu hamburguesa)-------------------------*/
+
+@media only screen and (max-width:1300px){ 
+    .ini{
+        display: none;
+    }
+    div.buscar,.buscador,div.lupa{
+        display:none;
+    }
+    
+    
+
+    #menu-check:not(:checked) ~ .encabezado{ display:none;}
+    #menu-check:checked ~ .encabezado{display: block;} 
+    
+    #menu{
+        padding: 0%;
+        display: block;
+        background-color: black; 
+        font-size: 40px;
+        color: rgb(250, 92, 0); ;
+        font-weight: bold;
+        position:absolute;
+        right:20px;
+        top:20px;
+        z-index: 9999;
+        
+    }
+    
+    label.span{
+        width: 50px;
+    }
+    #menu-cerrar{
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-abrir {display:none;} 
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+
+    nav.encabezado{
+        position: relative;
+        height: 100%; 
+        background-color:black;
+        
+        z-index: 50;
+        
+        
+    }
+     ul.lista1 {
+        display: flex;
+        flex-direction: column; 
+        flex-wrap: wrap;  
+        padding : 20px ;
+        height: 100%;
+        margin-top:20px ;
+        background-color: black;
+         
+        
+        
+
+    }
+    .lista1 li {
+        padding: 10px;
+        text-align: right;
+        
+    }
+   
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+    
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
