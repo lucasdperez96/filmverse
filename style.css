@@ -530,7 +530,9 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: auto;
+  width: 80%;
 }
+
 
 .col ul {
   display: block;
@@ -540,7 +542,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  max-width: 1136px;
+  width: 100%;
 }
 
 .col {
@@ -556,6 +558,7 @@ footer {
 footer h3 {
   margin-bottom: 20px;
   font-size: 18px;
+  text-align: center;
 }
 
 .redes-sociales {
@@ -568,8 +571,9 @@ footer h3 {
   margin-bottom: 10px;
 }
 
-.col a {
-  color: #fd8f47;
+.col a,
+.col p {
+  color: #fff;
 }
 
 .col a:hover {
@@ -585,4 +589,9 @@ footer h3 {
 .copy p {
   margin: 0;
   font-size: 14px;
+  color: #fff;
+}
+
+#col-final {
+  border: none;
 }
