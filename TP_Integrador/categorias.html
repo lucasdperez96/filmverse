@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
     <script src="https://kit.fontawesome.com/663905bcff.js" crossorigin="anonymous"></script>
-    
+
     <title>Categorias</title>
 </head>
-<body>
-    <header>
+<header>
+<section class="banner">
+    <div class="wrapper" id="cabezera">
+        <div class="logo" id="logo">
+            <a href="/"><img class="imgLogo" src="/Imagenes/logo.png" alt="logo"></a>
+            <a href="/"><img class="imgLogo" id="nombre" src="/Imagenes/Filmverse.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="inicio">Inicio</a></li>
+                    <li><a href="#" class="categorias">Categorias</a></li>
+                    <li><a href="/noticias.html" class="noticias"><b>Noticias</b></a></li>
+                    <li><a href="/miembros.html" class="miembros">Miembros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="container">
+            <div class="search-form">
+                <button type="submit" class="fas fa-search"></button>
+                <input onkeypress="getApiSearch(event)" class="buscador" id="search-input" type="text" onfocus="this.placeholder = ''"
+                    onblur="this.value='' ,this.placeholder = 'Que queres ver hoy?'" placeholder="Que queres ver hoy?">
+            </div>
+        </section>
 
-        <img class="logo" src="/TP_Integrador/Imagenes/Transparente B.png" alt="">
+    </div>
+</section>
+</header>
+
+<body>
+    <!--<header>
+
+         <img class="logo" src="/TP_Integrador/Imagenes/Transparente B.png" alt="">
         <input type="checkbox" id="menu-check">
         <label id="menu" for="menu-check">
             <span id="menu-abrir">&#9776;</span>
             <span id="menu-cerrar">X</span>
         </label>
 
-        
-        
+
+
         <nav class="encabezado">
             <ul class="lista1">
                 <li><a href="Inicio.html"><i class="fa-solid fa-house ini"></i> Inicio</a></li>
@@ -31,385 +61,431 @@
         </nav>
         <div class="buscar">
             <input class="buscador" type="text" placeholder="Buscar..." required>
-                <div class="lupa">
+            <div class="lupa">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
             </div>
-        </header>
-        <nav class="generos">  
-            <button onclick="filtro(this)" class="boton" id="todo">Todo</button> 
+        </div>
+    </header> -->
+
+    
+    
+    <section id="contenedor-categorias">
+
+        <nav class="generos">
+            <button onclick="filtro(this)" class="boton" id="todo">Todo</button>
             <button onclick="filtro(this)" class="boton" id="seriesp">Series Populares</button>
             <button onclick="filtro(this)" class="boton" id="seriesn">Series nuevas</button>
             <button onclick="filtro(this)" class="boton" id="pelisp">Peliculas Populares</button>
-            <button onclick="filtro(this)" class="boton" id="pelisn">Peliculas Nuevas</button> 
-            
+            <button onclick="filtro(this)" class="boton" id="pelisn">Peliculas Nuevas</button>
+        </nav>
     
-        </nav >  
-    <section id="contenedor">
-        <a  class="sinopsis" href="/TP_Integrador/sinopsis.html">
+        <div id="renderizado-datos"></div>
+        
+
+       <!--   <a class="sinopsis">
             <div class="elementos pelisn">
-                <img class="pelis" src="/TP_Integrador/Imagenes/2.jpg" alt="">
+                <img class="pelis" src="" alt="">
                 <p class="titulo">Murder Mistery</p>
                 <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
+                    <i class="fa-solid fa-circle-play icono "></i>
                 </div>
             </div>
         </a>
-        <div class="elementos pelisn "  > 
+
+        
+
+        <div class="elementos pelisn ">
             <img class="pelis" src="/TP_Integrador/Imagenes/3.jpg" alt="">
             <p class="titulo">Luther</p>
             <div class="play">
-            <i class="fa-solid fa-circle-play icono "></i>
+                <i class="fa-solid fa-circle-play icono "></i>
             </div>
 
         </div>
-        <div class="elementos pelisp" >
+        <div class="elementos pelisp">
             <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
             <p class="titulo">I See You</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
             </div>
         </div>
-        <div class="elementos pelisp" >
+        <div class="elementos pelisp">
             <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
             <p class="titulo">The Magicians Elephant</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn" >
-            <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
-            <p class="titulo">Minios:The rise of Grud</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisp" >
-            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
-            <p class="titulo">Hotel Transilvania 2</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesp" >
-            <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
-            <p class="titulo">Dragged Across Concrete</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesp" >
-            <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
-            <p class="titulo">The Bourne Legacy</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-         <div class="elementos pelisp">
-            <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
-            <p class="titulo">Trolls</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
-            <p class="titulo">Hotel Transilvania 2</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
-            <p class="titulo">Interestelar</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
-            <p class="titulo">I See You</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
-            <p class="titulo">The Magicians Elephant</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos pelisn">
             <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
             <p class="titulo">Minios:The rise of Grud</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
-            <p class="titulo">Hotel Transilvania 2</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
-            <p class="titulo">Dragged Across Concrete</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
-            <p class="titulo">The Bourne Legacy</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
-            <p class="titulo">Trolls</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesp">
-            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
-            <p class="titulo">Hotel Transilvania 2</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
-            <p class="titulo">Interestelar</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos seriesp">
-            <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
-            <p class="titulo">I See You</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
-            <p class="titulo">The Magicians Elephant</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
-        </div>
-        <div class="elementos pelisn">
-            <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
-            <p class="titulo">Minios:The rise of Grud</p>
-            <div class="play">
-                <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos pelisp">
             <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
             <p class="titulo">Hotel Transilvania 2</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
+        </div>
+        <div class="elementos seriesp">
+            <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
+            <p class="titulo">Dragged Across Concrete</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesp">
+            <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
+            <p class="titulo">The Bourne Legacy</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisp">
+            <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
+            <p class="titulo">Trolls</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
+            <p class="titulo">Hotel Transilvania 2</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
+            <p class="titulo">Interestelar</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
+            <p class="titulo">I See You</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
+            <p class="titulo">The Magicians Elephant</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
+            <p class="titulo">Minios:The rise of Grud</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
+            <p class="titulo">Hotel Transilvania 2</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
+            <p class="titulo">Dragged Across Concrete</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
+            <p class="titulo">The Bourne Legacy</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
+            <p class="titulo">Trolls</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesp">
+            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
+            <p class="titulo">Hotel Transilvania 2</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
+            <p class="titulo">Interestelar</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos seriesp">
+            <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
+            <p class="titulo">I See You</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
+            <p class="titulo">The Magicians Elephant</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisn">
+            <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
+            <p class="titulo">Minios:The rise of Grud</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
+        </div>
+        <div class="elementos pelisp">
+            <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
+            <p class="titulo">Hotel Transilvania 2</p>
+            <div class="play">
+                <i class="fa-solid fa-circle-play icono "></i>
+            </div>
         </div>
         <div class="elementos pelisp">
             <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
             <p class="titulo">Dragged Across Concrete</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos pelisn">
             <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
             <p class="titulo">The Bourne Legacy</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos pelisn">
             <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
             <p class="titulo">Trolls</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos pelisn">
             <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
             <p class="titulo">Hotel Transilvania 2</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
             <p class="titulo">Interestelar</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
             <p class="titulo">I See You</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
             <p class="titulo">The Magicians Elephant</p>
-             <div class="play">
+            <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
             <p class="titulo">Minios:The rise of Grud</p>
-             <div class="play">
+            <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos pelisn">
             <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
             <p class="titulo">Hotel Transilvania 2</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
             <p class="titulo">Dragged Across Concrete</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
             <p class="titulo">The Bourne Legacy</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
             <p class="titulo">Trolls</p>
-             <div class="play">
+            <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
             <p class="titulo">Hotel Transilvania 2</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
             <p class="titulo">Interestelar</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos pelisn">
             <img class="pelis" src="/TP_Integrador/Imagenes/4.jpg" alt="">
             <p class="titulo">I See You</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/5.jpg" alt="">
             <p class="titulo">The Magicians Elephant</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/6.jpg" alt="">
             <p class="titulo">Minios:The rise of Grud</p>
-             <div class="play">
+            <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
             <p class="titulo">Hotel Transilvania 2</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/8.jpg" alt="">
             <p class="titulo">Dragged Across Concrete</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div>
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/10.jpg" alt="">
             <p class="titulo">The Bourne Legacy</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/9.jpg" alt="">
             <p class="titulo">Trolls</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-                </div> 
+            </div>
         </div>
         <div class="elementos seriesn">
             <img class="pelis" src="/TP_Integrador/Imagenes/7.jpg" alt="">
             <p class="titulo">Hotel Transilvania 2</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-            </div> 
+            </div>
         </div>
         <div class="elementos seriesp">
             <img class="pelis" src="/TP_Integrador/Imagenes/1.png" alt="">
             <p class="titulo">Interestelar</p>
             <div class="play">
                 <i class="fa-solid fa-circle-play icono "></i>
-            </div> 
-        </div> 
-      
+            </div>
+        </div>-->
 
+        <div class="descripSelec contenedor" id="descripSelec">
+            <img id="poster" src="" alt="" />
+            <div class="descrpSelect">
+                <p id="titulo"></p>
+                <p id="fecha">
+                <p id="descripcion"></p>   
+            </div>
+        </div>       
     </section>
-    <footer>
+    <!-- <footer>
         <div>
             <h3><u>Contáctanos</u></h3>
             <p>Teléfono: 123456789</p>
             <p>Correo electrónico: ejemplo@ejemplo.com</p>
             <p>Dirección: Ejemplo 1234, Ciudad, País</p>
-            
+
 
         </div>
         <div class="redes">
             <h3><u>Síguenos</u></h3>
             <ul class="redes-sociales " id="1">
-                <li class="info"><a href=""></a><i class="fa-brands fa-facebook ini" ></i>Facebook</li>
+                <li class="info"><a href=""></a><i class="fa-brands fa-facebook ini"></i>Facebook</li>
                 <li class="info"><a href=""></a><i class="fa-brands fa-instagram ini"></i>Instagram</li>
-                <li class="info"><a href=""></a><i class="fa-brands fa-twitter ini"></i>Twitter  </li>
-        </div >
-           
+                <li class="info"><a href=""></a><i class="fa-brands fa-twitter ini"></i>Twitter </li>
+        </div>
+
         <div class="redes">
             <h3><u>Información legal</u></h3>
-            <ul class="redes-sociales"> 
+            <ul class="redes-sociales">
                 <li class="info"><a href=""></a>Terminos y condiciones </li>
                 <li class="info"><a href=""></a>Politicas de privacidad</li>
-                
-            </ul>
-            
-        </div>
-    </footer>
 
-   
- <script src="filtros.js"></script> 
+            </ul>
+
+        </div>
+    </footer> -->
+    
+
+    <script src="filtros.js"></script>
 </body>
+<footer>
+    <div class="container-footer">
+        <div class="row">
+            <div class="col">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: 123456789</p>
+                <p>Correo electrónico: ejemplo@ejemplo.com</p>
+                <p>Dirección: Ejemplo 1234, Ciudad, País</p>
+            </div>
+            <div class="col">
+                <h3>Síguenos</h3>
+                <ul class="redes-sociales">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <div class="copy">
+                        <p>&copy; 2023 Filmverse. Todos los derechos reservados.</p>
+                    </div>
+                </ul>
+            </div>
+            <div class="col" id="col-final">
+                <h3>Información legal</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>
