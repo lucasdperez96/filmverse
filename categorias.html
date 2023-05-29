@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/663905bcff.js" crossorigin="anonymous"></script>
+
+    <title>Categorias</title>
+</head>
+<header>
+<section class="banner">
+    <div class="wrapper" id="cabezera">
+        <div class="logo" id="logo">
+            <a href="/"><img class="imgLogo" src="/Imagenes/logo.png" alt="logo"></a>
+            <a href="/"><img class="imgLogo" id="nombre" src="/Imagenes/Filmverse.png" alt="logo"></a>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="inicio">Inicio</a></li>
+                    <li><a href="#" class="categorias">Categorias</a></li>
+                    <li><a href="/noticias.html" class="noticias"><b>Noticias</b></a></li>
+                    <li><a href="/miembros.html" class="miembros">Miembros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="container">
+            <div class="search-form">
+                <button type="submit" class="fas fa-search"></button>
+                <input onkeypress="getApiSearch(event)" class="buscador" id="search-input" type="text" onfocus="this.placeholder = ''"
+                    onblur="this.value='' ,this.placeholder = 'Que queres ver hoy?'" placeholder="Que queres ver hoy?">
+            </div>
+        </section>
+
+    </div>
+</section>
+</header>
+
+<body>
+    
+    <section id="contenedor-categorias">
+
+        <nav class="generos">
+            <button onclick="filtro(this)" class="boton" id="todo">Todo</button>
+            <button onclick="filtro(this)" class="boton" id="seriesp">Series Populares</button>
+            <button onclick="filtro(this)" class="boton" id="seriesn">Series nuevas</button>
+            <button onclick="filtro(this)" class="boton" id="pelisp">Peliculas Populares</button>
+            <button onclick="filtro(this)" class="boton" id="pelisn">Peliculas Nuevas</button>
+        </nav>
+    
+        <div id="renderizado-datos"></div>
+        
+
+        <div class="descripSelec contenedor" id="descripSelec">
+            <img id="poster" src="" alt="" />
+            <div class="descrpSelect">
+                <p id="titulo"></p>
+                <p id="fecha">
+                <p id="descripcion"></p>   
+            </div>
+        </div>       
+    </section>
+    
+
+    <script src="filtros.js"></script>
+</body>
+<footer>
+    <div class="container-footer">
+        <div class="row">
+            <div class="col">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: 123456789</p>
+                <p>Correo electrónico: ejemplo@ejemplo.com</p>
+                <p>Dirección: Ejemplo 1234, Ciudad, País</p>
+            </div>
+            <div class="col">
+                <h3>Síguenos</h3>
+                <ul class="redes-sociales">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <div class="copy">
+                        <p>&copy; 2023 Filmverse. Todos los derechos reservados.</p>
+                    </div>
+                </ul>
+            </div>
+            <div class="col" id="col-final">
+                <h3>Información legal</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
