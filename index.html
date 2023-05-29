@@ -43,10 +43,11 @@
             </nav>
         </div>
         <div class="container">
-            <form class="search-form">
-                <button type="submit" class="fas fa-search"></button>
-                <input type="text" placeholder="Que queres ver hoy?" required />
-            </form>
+            <div class="search-form">
+                    <button type="submit" class="fas fa-search"></button>
+                    <input onkeypress="getApiSearch(event)" class="buscador" id="search-input" type="text" onfocus="this.placeholder = ''"
+                    onblur="this.value='' ,this.placeholder = 'Que queres ver hoy?'" placeholder="Que queres ver hoy?">
+                </div>
         </div>
     </section>
     <section class="contenedor">
@@ -341,6 +342,7 @@
         </footer>
     </main>
     <script src="https://kit.fontawesome.com/c22bdf4c92.js" crossorigin="anonymous"></script>
+    <script src="JS/popup.js"></script>
     <script src="JS/main.js"></script>
 </body>
 
