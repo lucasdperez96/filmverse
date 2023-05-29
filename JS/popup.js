@@ -58,8 +58,7 @@ const inicio = document.getElementById('renderizado-datos').innerHTML = `Inserte
 function getApiInfo(valuesInput) {
     // URL de la API
     const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=026bb8c96a5c47d0912cdf70616d9379&language=es-MX&query=${valuesInput}`;
-    alert(apiUrl);
-
+    
     // Method
     const miInit = { method: 'GET' };
 
