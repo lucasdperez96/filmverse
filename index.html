@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="JS/logo.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&display=swap" rel="stylesheet" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>FilmVerse</title>
 </head>
 
-<body>
-    <section class="banner">
-        <div class="logo">
-            <a href="#"><img src="Imagenes/Transparente B.png" alt="logo" /></a>
-        </div>
+<header>
+    
         <div class="menuHamburguesa">
             <div class="icono-menu">
                 <img src="Imagenes/open-menu2.png" id="icono-menu" />
@@ -30,25 +28,62 @@
                 </ul>
             </div>
         </div>
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html"><b><u>Inicio</u></b></a>
-                    </li>
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Noticias</a></li>
-                    <li><a href="#">Miembros</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="container">
-            <form class="search-form">
-                <button type="submit" class="fas fa-search"></button>
-                <input type="text" placeholder="Que queres ver hoy?" required />
-            </form>
-        </div>
+        <section class="banner">
+            <div class="wrapper" id="cabezera">
+                <div class="logo" id="logo">
+                    <a href="/"><img class="imgLogo" src="Imagenes/logo.png" alt="logo"></a>
+                    <a href="/"><img class="imgLogo" id="nombre" src="Imagenes/Filmverse.png" alt="logo"></a>
+                </div>
+                <div class="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="inicio"><b>Inicio</b></a></li>
+                            <li><a href="categorias.html" class="categorias">Categorias</a></li>
+                            <li><a href="noticias.html" class="noticias">Noticias</a></li>
+                            <li><a href="miembros.html" class="miembros">Miembros</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <section class="container">
+                    <div class="search-form">
+                        <button type="submit" class="fas fa-search"></button>
+                        <input onkeypress="getApiSearch(event)" class="buscador" id="search-input" type="text" onfocus="this.placeholder = ''"
+                        onblur="this.value='' ,this.placeholder = 'Que queres ver hoy?'" placeholder="Que queres ver hoy?">
+                    </div>
+                </section>
     </section>
+    <!-- <section class="banner">
+        <div class="wrapper" id="cabezera">
+            <div class="logo" id="logo">
+                <a href="/"><img class="imgLogo" src="Imagenes/logo.png" alt="logo"></a>
+                <a href="/"><img class="imgLogo" id="nombre" src="Imagenes/Filmverse.png" alt="logo"></a>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html"><b><u>Inicio</u></b></a>
+                        </li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="miembros.html">Miembros</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section class="container">
+                <div class="search-form">
+                    <button type="submit" class="fas fa-search"></button>
+                    <input onkeypress="getApiSearch(event)" class="buscador" id="search-input" type="text" onfocus="this.placeholder = ''"
+                    onblur="this.value='' ,this.placeholder = 'Que queres ver hoy?'" placeholder="Que queres ver hoy?">
+                </div>
+            </section>
+
+        </div>
+    </section> -->
+
+</header>
+
+<body>
     <section class="contenedor">
         <div class="contenedor-nuevo-contenido">
             <h1>Descubre nuevo contenido diariamente</h1>
@@ -303,45 +338,62 @@
                 <p id="descripcion"></p>   
             </div>
         </div>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h3>Contáctanos</h3>
-                        <p>Teléfono: 123456789</p>
-                        <p>Correo electrónico: ejemplo@ejemplo.com</p>
-                        <p>Dirección: Ejemplo 1234, Ciudad, País</p>
-                    </div>
-                    <div class="col">
-                        <h3>Síguenos</h3>
-                        <ul class="redes-sociales">
-                            <li>
-                                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                            </li>
-                            <div class="copy">
-                                <p>&copy; 2023 Filmverse. Todos los derechos reservados.</p>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Información legal</h3>
-                        <ul>
-                            <li><a href="#">Política de privacidad</a></li>
-                            <li><a href="#">Términos y condiciones</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        
     </main>
+
+    <!-- The Modal -->
+
+    <div id="pelicula" class="popup-desplegale">
+        <div class="cartelera-pelicula">
+            <!-- Modal content -->
+            <span class="close">&times;</span>
+            <article id="renderizado-datos"></article>
+        </div>
+    </div> <!-- END the modal -->
+
+
+    <!-- <script type="text/javascript" src="JS/funciones.js"></script> -->
+    <script src="JS/popup.js"></script>
+
     <script src="https://kit.fontawesome.com/c22bdf4c92.js" crossorigin="anonymous"></script>
+    
     <script src="JS/main.js"></script>
 </body>
 
+<footer>
+    <div class="content">
+        <div class="row">
+            <div class="col">
+                <h3>Contáctanos</h3>
+                <p>Teléfono: 123456789</p>
+                <p>Correo electrónico: ejemplo@ejemplo.com</p>
+                <p>Dirección: Ejemplo 1234, Ciudad, País</p>
+            </div>
+            <div class="col">
+                <h3>Síguenos</h3>
+                <ul class="redes-sociales">
+                    <li>
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <div class="copy">
+                        <p>&copy; 2023 Filmverse. Todos los derechos reservados.</p>
+                    </div>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Información legal</h3>
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

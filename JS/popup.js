@@ -52,7 +52,7 @@ window.onclick = function (event) {
 
 // Javascript search API
 // Inicio con un texto por default
-const inicio = document.getElementById('renderizado-datos').innerHTML = `Inserte su busqueda en el buscador`
+const inicio = document.getElementById('renderizado-datos').innerHTML = ``
 
 
 function getApiInfo(valuesInput) {

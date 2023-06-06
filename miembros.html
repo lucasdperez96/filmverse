@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="contacto.css" />
     <script src="JS/logo.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&display=swap" rel="stylesheet">
+    
     <title>Miembros - FilmVerse</title>
 </head>
 <header>
@@ -22,9 +23,9 @@
                 <nav>
                     <ul>
                         <li><a href="index.html" class="inicio">Inicio</a></li>
-                        <li><a href="/" class="categorias">Categorias</a></li>
-                        <li><a href="/" class="noticias">Noticias</a></li>
-                        <li><a href="/miembros.html" class="miembros"><b>Miembros</b></a></li>
+                        <li><a href="categorias.html" class="categorias">Categorias</a></li>
+                        <li><a href="noticias.html" class="noticias">Noticias</a></li>
+                        <li><a href="miembros.html" class="miembros"><b>Miembros</b></a></li>
                     </ul>
                 </nav>
             </div>
@@ -179,15 +180,15 @@
 
                             <span class="obligatorio">*</span>
                         </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                            placeholder="Escribí tu nombre">
+                        <input type="text" name="introducir_nombre" id="nombre"
+                            placeholder="Escribí tu nombre"> <span id="validadorNombre"></span><br>
                     </p>
                     <p>
                         <label for="email" class="colocar_email">Email
                             <span class="obligatorio">*</span>
                         </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio"
-                            placeholder="Escribí tu Email">
+                        <input type="text" name="introducir_email" id="email"
+                            placeholder="Escribí tu Email"><span id="validadorEmail"></span><br>
                     </p>
                     <p>
                         <label for="mensaje" class="colocar_mensaje">Mensaje
@@ -218,6 +219,8 @@
 
         <!-- <script type="text/javascript" src="JS/funciones.js"></script> -->
         <script src="JS/popup.js"></script>
+        <script src="JS/formValid.js"></script>
+        
     </section>
 
 
